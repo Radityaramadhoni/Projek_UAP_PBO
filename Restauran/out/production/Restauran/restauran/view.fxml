@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="948.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restauran.viewController">
+   <children>
+      <TabPane prefHeight="645.0" prefWidth="948.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Menu Makanan">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="555.0" prefWidth="634.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#630000" height="623.0" stroke="BLACK" strokeType="INSIDE" width="948.0" />
+                        <Label alignment="CENTER" layoutX="291.0" layoutY="35.0" prefHeight="59.0" prefWidth="366.0" text="Menu Makanan Restauran " textAlignment="CENTER" textFill="#99feff">
+                           <font>
+                              <Font name="Gloucester MT Extra Condensed" size="48.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="TFpmesan" layoutX="180.0" layoutY="225.0" prefHeight="26.0" prefWidth="208.0" />
+                        <Label layoutX="64.0" layoutY="229.0" text="Nama Pemesan" textFill="#fbf3e4" />
+                        <Spinner fx:id="SjumlahPesanan" layoutX="180.0" layoutY="311.0" prefHeight="26.0" prefWidth="128.0" />
+                        <Label layoutX="67.0" layoutY="315.0" text="Jumlah Pesanan" textFill="#fbf3e4" />
+                        <Button layoutX="73.0" layoutY="438.0" mnemonicParsing="false" onAction="#pemesanan" prefHeight="26.0" prefWidth="78.0" text="Pesan" />
+                        <RadioButton fx:id="nasiGoreng" layoutX="439.0" layoutY="271.0" mnemonicParsing="false" onAction="#getMenu" prefHeight="18.0" prefWidth="101.0" text="Nasi Goreng" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="menu" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <ImageView fitHeight="113.0" fitWidth="169.0" layoutX="439.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Picture/NasiGoreng.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="551.0" layoutY="463.0" text="Rp. 7.000" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="95.0" fitWidth="190.0" layoutX="698.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Picture/Ramen.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="779.0" layoutY="274.0" text="Rp. 17.000" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="ramen" layoutX="698.0" layoutY="271.0" mnemonicParsing="false" onAction="#getMenu" prefHeight="18.0" prefWidth="101.0" text="Ramen" textFill="#f8f8f8" toggleGroup="$menu">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <ImageView fitHeight="93.0" fitWidth="177.0" layoutX="439.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Picture/milkShake.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="milkShake" layoutX="439.0" layoutY="460.0" mnemonicParsing="false" onAction="#getMenu" prefHeight="18.0" prefWidth="101.0" text="Milk Shake" textFill="#f8f8f8" toggleGroup="$menu">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <Label layoutX="547.0" layoutY="274.0" text="Rp. 13.000" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="109.0" fitWidth="200.0" layoutX="697.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Picture/tehManis.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="tehManis" layoutX="698.0" layoutY="469.0" mnemonicParsing="false" onAction="#getMenu" prefHeight="18.0" prefWidth="83.0" text="Teh Manis" textFill="#f8f8f8" toggleGroup="$menu">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                        </RadioButton>
+                        <Label layoutX="800.0" layoutY="472.0" text="Rp. 4.000" textFill="WHITE">
+                           <font>
+                              <Font name="Britannic Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Daftar Pemesan">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#96c7c1" height="617.0" stroke="BLACK" strokeType="INSIDE" width="948.0" />
+                        <Label layoutX="292.0" layoutY="20.0" text="Data Pemesanan" textFill="#3f3351e5">
+                           <font>
+                              <Font name="Bauhaus 93" size="48.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tabelPesanan" layoutX="14.0" layoutY="86.0" prefHeight="426.0" prefWidth="920.0">
+                          <columns>
+                            <TableColumn fx:id="COLpemesanan" prefWidth="220.40000915527344" text="Pemesan" />
+                              <TableColumn fx:id="COLpesanan" prefWidth="128.39999389648438" text="Pesanan" />
+                              <TableColumn fx:id="COLjumlah" prefWidth="203.39996337890625" text="Jumlah Pesanan" />
+                              <TableColumn fx:id="COLharga" prefWidth="160.60003662109375" text="Harga Satuan" />
+                              <TableColumn fx:id="COLtotal" prefWidth="206.0" text="Total Pembayaran" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="statusDB" layoutX="31.0" layoutY="553.0" textFill="#1600da">
+                           <font>
+                              <Font name="Dubai Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="844.0" layoutY="546.0" mnemonicParsing="false" onAction="#showDatabase" prefHeight="45.0" prefWidth="77.0" text="SHOW" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
